@@ -27,7 +27,7 @@
             <v-icon size="16" color="white">edit</v-icon>
           </button>
 
-          <button v-if="navigatorCanShare" class="pswp__button action-webshare" style="background: none;"
+          <button v-if="canNativeShare" class="pswp__button action-webshare" style="background: none;"
                   :title="$gettext('Share')" @click.exact="onWebShare">
             <v-icon size="16" color="white">share</v-icon>
           </button>
@@ -104,7 +104,7 @@ export default {
       canEdit: this.$config.allow("photos", "update") && this.$config.feature("edit"),
       canLike: this.$config.allow("photos", "manage") && this.$config.feature("favorites"),
       canDownload: this.$config.allow("photos", "download") && this.$config.feature("download"),
-      navigatorCanShare: navigator.canShare,
+      canNativeShare: navigator.canShare && this.$config.feature("nativeshare"),
       selection: this.$clipboard.selection,
       config: this.$config.values,
       item: new Thumb(),

@@ -35,6 +35,7 @@ Features:
   Services: true
   Settings: true
   Share: true
+  NativeShare: true
   Upload: true
   Videos: true
 Import:

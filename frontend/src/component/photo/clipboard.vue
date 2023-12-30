@@ -36,7 +36,7 @@
 
         
         <v-btn
-            v-if="context !== 'archive' && context !== 'review' && navigatorCanShare" fab dark
+            v-if="context !== 'archive' && context !== 'review' && canNativeShare" fab dark
             small
             :title="$gettext('Share')"
             color="share"
@@ -210,7 +210,7 @@ export default {
       config: this.$config.values,
       expanded: false,
       isAlbum: this.album && this.album.Type === 'album',
-      navigatorCanShare: navigator.canShare,
+      canNativeShare: navigator.canShare && features.nativeshare,
       dialog: {
         archive: false,
         delete: false,
