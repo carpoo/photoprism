@@ -1,7 +1,7 @@
 /*
 Package commands provides the CLI commands of PhotoPrism.
 
-Copyright (c) 2018 - 2023 PhotoPrism UG. All rights reserved.
+Copyright (c) 2018 - 2024 PhotoPrism UG. All rights reserved.
 
 	This program is free software: you can redistribute it and/or modify
 	it under Version 3 of the GNU Affero General Public License (the "AGPL"):
@@ -48,8 +48,8 @@ var PhotoPrism = []cli.Command{
 	FindCommand,
 	ImportCommand,
 	CopyCommand,
-	FacesCommand,
-	PlacesCommand,
+	FacesCommands,
+	PlacesCommands,
 	PurgeCommand,
 	CleanUpCommand,
 	OptimizeCommand,
@@ -57,14 +57,15 @@ var PhotoPrism = []cli.Command{
 	ConvertCommand,
 	ThumbsCommand,
 	MigrateCommand,
-	MigrationsCommand,
+	MigrationsCommands,
 	BackupCommand,
 	RestoreCommand,
 	ResetCommand,
 	PasswdCommand,
-	UsersCommand,
-	ClientsCommand,
-	ShowCommand,
+	UsersCommands,
+	ClientsCommands,
+	AuthCommands,
+	ShowCommands,
 	VersionCommand,
 	ShowConfigCommand,
 	ConnectCommand,
